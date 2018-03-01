@@ -6,7 +6,7 @@ First, make sure you have Python 3, virtual environment and pip installed.  If y
 
 Clone the repo at https://github.com/torypayne/geocoder.git
 
-`cd` into the folder, and then create a Python3 virtual environment. Locally, the command I use to do this is `python3.6 -m venv`
+`cd` into the folder, and then create a Python3 virtual environment. Locally, the command I use to do this is `python3.6 -m venv env` but that may change for you depending on how you have your python 3 installed.
 
 To activate your virtual environemt and install dependencies:
 
