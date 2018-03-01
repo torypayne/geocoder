@@ -23,7 +23,7 @@ FLASK_APP=app.py flask run
 
 And then direct your browser to http://localhost:5000/.  At this point you can search addresses using the UI.  The response is pure JSON and intentionally unstyled.
 
-You may also geocode addresses directly from the command line using curl. For example, `curl POST http://localhost:5000/geocode?address=1341+valencia+street`.  The service accepts GET requests as well as POST requests, so if you want to share a link with a friend without them needing to worry about making sure it's a post request, you may do so.
+You may also geocode addresses directly from the command line using curl. For example, `curl GET http://localhost:5000/geocode?address=1341+valencia+street`.
 
 The service first checks Google's Geocode service, and then the Here one.
 

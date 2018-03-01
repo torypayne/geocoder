@@ -21,7 +21,7 @@ def check_google_geocoder(search_text):
 def index():
     return render_template("index.html")
 
-@app.route("/geocode", methods=["POST", "GET"])
+@app.route("/geocode", methods=["GET"])
 def geocode_address():
     search_text = request.args.get("address")
     if search_text == '':
