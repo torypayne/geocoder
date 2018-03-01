@@ -21,9 +21,9 @@ def check_google_geocoder(search_text):
 def index():
     return render_template("index.html")
 
-@app.route("/geocode", methods=["POST"])
+@app.route("/geocode", methods=["POST", "GET"])
 def geocode_address():
-    search_text = request.form['address']
+    search_text = request.args.get("address")
     if search_text == '':
         flash("You must enter an address")
         return render_template("index.html")
