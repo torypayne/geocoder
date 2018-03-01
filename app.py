@@ -34,7 +34,8 @@ def geocode_address():
         try:
             results = check_here_geocoder(search_text)
         except:
-            results = "Both geocoders failed!"
+            flash("Both geocoders failed! Enter a new address or try again later.")
+            return render_template("index.html")
     return results
 
 
