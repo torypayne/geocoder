@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<title>Tory's Simple Geocoder</title>
+<link rel="stylesheet" href="static/css/cyborg.bootstrap.min.css">
+<link rel="shortcut icon" href="static/favicon.ico">
+<link rel="stylesheet" href="static/css/main.css">
+<link rel="stylesheet" href="static/css/ladda-themeless.min.css">
+</head>
+<body>
+
+<div class="container">
+<form action="/geocode", method="post">
+<div class="jumbotron">
+                <h1>Geocode </h1>
+                <p>Input an address.  Get geocode results.</p>
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <ul class=flashes>
+                    {% for message in messages %}
+                      <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endwith %}
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Put the address you want to geocode here" name="address" id="address">
+                    <span class="input-group-btn">
+                      <button class="btn btn-primary ladda-button" type="submit" data-style="slide-left"><span class="ladda-label">Submit</span></button>
+                    </span>
+                  </div>
+                  <br>
+              </div>
+</form>
+</div>
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="static/js/spin.min.js"></script>
+<script src="static/js/ladda.min.js"></script>
+
+<script>
+           Ladda.bind( '.ladda-button', { timeout: 30000 } );
+</script>
+
+</body>
+</html>
